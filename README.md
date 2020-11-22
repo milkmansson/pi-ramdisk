@@ -2,6 +2,9 @@
 
 Alongside a project using a Raspberry PI, I became quite concerned as several SD cards had been ruined by various PI projects in the past.  Given the Raspberry Pi 4 has 8GB of RAM (well, at least that specific model) I figured it was time to figure out how to make this work.  I am still a linux noob, so I decided to put my learnings into a readme to help future me's in the making.
 
+## Background:
+Some people complain that the Raspberry Pi ruins SD Cards.  Principle reason for this is that there is no obvious off button for the Pi.  This leads people to assume that the only way is to pull the power cable.  Repeated episodes of this over a long time eventually causes irrecoverable corruption of SD Card.  I don't have conclusive knowledge either way - but people seem to get animated about this - Check out this link:  https://www.raspberrypi.org/forums/viewtopic.php?t=202381
+
 ## Major points:
 * configurations for this are in /etc/fstab
 * if you mess this up, you have to rescue your system in user mode
