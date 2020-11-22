@@ -27,3 +27,6 @@ tmpfs    /var/spool/mqueue    tmpfs    defaults,noatime,nosuid,mode=070
 ~~~
 a swapfile is not a swap partition, no line here use  dphys-swapfile swap[on|off]  for that
 
+## Final notes:
+* Other paths could go there, and such ram disk sizes could also change.  Some have a mandatory minimum.
+* RAM is not hard allocated at boot time - it is only consumed as it is used.
