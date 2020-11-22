@@ -5,16 +5,19 @@ Alongside a project using a Raspberry PI, I became quite concerned as several SD
 ## Background:
 Some people complain that the Raspberry Pi ruins SD Cards.  Principle reason for this is that there is no obvious off button for the Pi.  This leads people to assume that the only way is to pull the power cable.  Repeated episodes of this over a long time eventually causes irrecoverable corruption of SD Card.  I don't have conclusive knowledge either way - but people seem to get animated about this - Check out this link:  https://www.raspberrypi.org/forums/viewtopic.php?t=202381
 
-## Major points:
+## Major points - how I broke it:
 * configurations for this are in /etc/fstab
-* if you mess this up, you have to rescue your system in user mode
+* if you do this, anything you put there will be lost on boot.  (this was suitable for a particular project for me, and worthwhile doing)
+* if you mess this up, you have to rescue your system in "single user mode"
   * copying and pasting text from OneNote into /etc/fstab whilst using Putty will put invisible bad charaters into your file and it wont boot
   * i put text into notepad and copied out again, and then run 'dos2unix against it - this tool is accessible in the distro (if you sudo apt install it first)
+
+## Single user mode gotcha:
 * if you haven't put a password on your root account (unlikely - nothing I've seen so far actually asks) you won't be able to rescue it using linux boot methods
   * I found a link that took me through holding a key at a certain moment, which took forever
 * if you are using a raspberry pi, thankfully they have a text file which you can edit boot properties with and still fix it
   * Instructions for this are at: https://linux.tips/tutorials/how-to-boot-raspberry-pi-into-single-user-mode
-* if you do what I have done, logs will be lost on boot.  (this was suitable for a particular project for me, and worthwhile doing for it)
+
 
 ## New Lines in my /etc/fstab file:
 ~~~
